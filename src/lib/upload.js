@@ -18,7 +18,7 @@ const upload = async (file) => {
                     createdAt: Date.now()
                 });
 
-                // ✅ Return the Base64 data for direct <img src>
+                //  Return the Base64 data for direct <img src>
                 resolve(reader.result);
 
             } catch (error) {
@@ -28,7 +28,7 @@ const upload = async (file) => {
 
         reader.onerror = () => reject("File reading failed!");
 
-        reader.readAsDataURL(file); // ✅ Base64 conversion
+        reader.readAsDataURL(file); //  Base64 conversion
     });
 };
 
